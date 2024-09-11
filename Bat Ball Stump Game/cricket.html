@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Cricket Game</title>
+
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(89, 148, 112);
+            border-radius: 20%;
+            margin: 3px;
+            border-color: 3px rgb(233, 29, 29);
+            width: 80px;
+            height: 50px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick="
+    generateComputerChoice();
+
+    let resultMsg;
+    
+
+
+console.log(`computer choise is ${computerChoice}`);
+
+if (computerChoice === 'Ball'){
+    console.log('user won');
+}
+else if (computerChoice === 'Bat'){
+    console.log(`It's a tie`);
+} else if (computerChoice ==='Stump'){
+    console.log('computer has won')
+}
+
+alert(`you have chosen Stump. computer choice is ${computerChoice} and ${resultMsg}`);
+
+
+
+">Bat</button>
+    <button>Ball</button>
+    <button>Stump</button>
+
+
+    <script>
+
+        let computerChoice;
+        function generateComputerChoice() {
+            const userMessage = 'you can chosen Bat';
+            // This will generate random number between 0 and 3
+
+            let randomNumber = Math.random() * 3;
+
+
+
+            if (randomNumber > 0 && randomNumber <= 1) {
+                computerChoice = 'Bat';
+                // console.log('computer choice is Bat');
+            }
+            else if (randomNumber > 1 && radomNumber <= 2) {
+                computerChoice = 'Ball';
+                // console.log('computer choice is Ball');
+            }
+            else {
+                computerChoice = 'Stump'
+                // console.log('computer choice is Stump');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
